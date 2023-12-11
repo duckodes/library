@@ -2,3 +2,8 @@
     font-family: 'Poiret_One';
     src: url('../res/font-family/Poiret_One/PoiretOne-Regular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Ysabeau_SC';
+    src: url('../res/font-family/Ysabeau_SC/YsabeauSC-VariableFont_wght.ttf') format('truetype');
+}
