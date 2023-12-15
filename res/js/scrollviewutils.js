@@ -36,9 +36,9 @@ var scrollviewutils = (function () {
     }
     function win() {
         return{
-            getEventListener: getEventListeners()
+            getEventListener: getEventListener()
         };
-        function getEventListeners() {
+        function getEventListener() {
             const scrollListeners = getEventListeners(window).scroll;
     
             if (scrollListeners && scrollListeners.length > 0) {
