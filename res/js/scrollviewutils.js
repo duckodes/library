@@ -9,7 +9,8 @@ var scrollviewutils = (function () {
     return {
         ito: ito,
         cto: cto,
-        sie: sie
+        sie: sie,
+        win: win
     };
     function ito(id) {
         document.getElementById(id).scrollIntoView();
@@ -32,5 +33,20 @@ var scrollviewutils = (function () {
         const isPartiallyInView = (elementTop <= windowHeight && elementBottom >= 0);
 
         return isPartiallyInView;
+    }
+    function win() {
+        return{
+            getEventListener: getEventListener
+        };
+        function getEventListener() {
+            const scrollListeners = getEventListeners(window).scroll;
+    
+            if (scrollListeners && scrollListeners.length > 0) {
+                return true;
+            } else {
+                return false;
+            }
+    
+        }
     }
 }());
