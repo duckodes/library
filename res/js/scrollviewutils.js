@@ -35,9 +35,8 @@ var scrollviewutils = (function () {
         return isPartiallyInView;
     }
     function win() {
-        var getEventListener = getEventListeners();
         return{
-            getEventListener: getEventListener
+            getEventListener: getEventListeners()
         };
         function getEventListeners() {
             const scrollListeners = getEventListeners(window).scroll;
