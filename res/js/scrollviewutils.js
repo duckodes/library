@@ -35,10 +35,11 @@ var scrollviewutils = (function () {
         return isPartiallyInView;
     }
     function win() {
+        var getEventListener = getEventListeners();
         return{
             getEventListener: getEventListener
         };
-        function getEventListener() {
+        function getEventListeners() {
             const scrollListeners = getEventListeners(window).scroll;
     
             if (scrollListeners && scrollListeners.length > 0) {
@@ -46,7 +47,6 @@ var scrollviewutils = (function () {
             } else {
                 return false;
             }
-    
         }
     }
 }());
