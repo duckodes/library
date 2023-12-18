@@ -361,13 +361,16 @@ var motionbackground = (function () {
         animateParticles();
         var initonce = false;
         window.addEventListener("resize", () => {
-            canvas.remove();
-            if (!initonce) {
-                setTimeout(() => {
-                    initdotliner(color1, color2);
-                }, 200);
-                initonce = true;
-            }
+            clearTimeout(window.resizedFinished);
+            window.resizedFinished = setTimeout(function () {
+                canvas.remove();
+                if (!initonce) {
+                    setTimeout(() => {
+                        initdotliner(color1, color2);
+                    }, 200);
+                    initonce = true;
+                }
+            }, 200);
         });
     }
 }());
