@@ -359,9 +359,15 @@ var motionbackground = (function () {
 
         createParticles();
         animateParticles();
+        var initonce = false;
         window.addEventListener("resize", () => {
             canvas.remove();
-            initdotliner(color1, color2);
+            if (!initonce) {
+                setTimeout(() => {
+                    initdotliner(color1, color2);
+                }, 200);
+                initonce = true;
+            }
         });
     }
 }());
