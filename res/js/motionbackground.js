@@ -360,8 +360,7 @@ var motionbackground = (function () {
         createParticles();
         animateParticles();
         window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            initdotliner(color1, color2);
         });
     }
 }());
