@@ -360,7 +360,7 @@ var motionbackground = (function () {
         createParticles();
         animateParticles();
         window.addEventListener("resize", () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            canvas.remove();
             initdotliner(color1, color2);
         });
     }
