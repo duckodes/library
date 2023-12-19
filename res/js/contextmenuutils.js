@@ -13,6 +13,8 @@ var contextmenuutils = (function () {
 
             var c = document.createElement("div");
             c.id = "ins-contextmenu";
+            c.style.left = (e.clientX) + "px";
+            c.style.top = (e.clientY) + "px";
 
             p.appendChild(b);
             p.appendChild(c);
