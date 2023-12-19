@@ -1,0 +1,29 @@
+#ins-contextmenu-base {
+    position: fixed;
+    top: "0";
+    left: "0";
+    width: "100%";
+    height: "100%";
+}
+
+#ins-contextmenu-base #ins-contextmenu {
+    color: "#fff";
+    background: "#353535";
+    border-radius: "10px";
+    position: "fixed";
+}
+
+#ins-contextmenu-base #ins-contextmenu div {
+    margin-top: "5px";
+    margin-bottom: "5px";
+    padding-top: "5px";
+    padding-bottom: "5px";
+    padding-left: "10px";
+    padding-right: "10px";
+    text-align: "center";
+    display: "flex";
+    align-items: "center";
+    justify-content: "center";
+    cursor: "pointer";
+    font-family: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif";
+}
