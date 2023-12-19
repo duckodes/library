@@ -6,7 +6,7 @@ var contextmenuutils = (function () {
     };
     var atv = false;
     /** @param fc ( b, c ) */
-    function init(p, fc) {
+    function init(e, p, fc) {
         if (!atv) {
             var b = document.createElement("div");
             b.id = "ins-contextmenu-base";
