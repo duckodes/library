@@ -2,6 +2,8 @@ const dateutils = (function () {
     return {
         ToDate: timestampToTime,
         ToDateTime: timestampToDateTime,
+        ToTimestamp: dateTimeToTimestamp,
+        _ToTimestamp: _dateTimeToTimestamp,
         ToHash: encrypt
     };
     function timestampToTime(timestamp = Date.now()) {
@@ -18,6 +20,19 @@ const dateutils = (function () {
         const seconds = String(date.getSeconds()).padStart(2, '0');
 
         return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
+    function dateTimeToTimestamp(year = 0, month = 0, day = 0, hours = 0, minutes = 0, seconds = 0) {
+        const timestamp = new Date(year, month - 1, day, hours, minutes, seconds).getTime();
+        return timestamp;
+    }
+    /** dateTimeString  -  "YYYY-MM-DD hr-min-sec" */
+    function _dateTimeToTimestamp(dateTimeString = "1970-1-1_08:00:00") {
+        const [datePart, timePart] = dateTimeString.split('_');
+        const [year, month, day] = datePart.split('-').map(Number);
+        const [hours, minutes, seconds] = timePart.split(':').map(Number);
+
+        const timestamp = new Date(year, month - 1, day, hours, minutes, seconds).getTime();
+        return timestamp;
     }
     function encrypt(timestamp = Date.now()) {
         const now = new Date(timestamp);
