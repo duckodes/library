@@ -1,3 +1,4 @@
+/** ver.1.0.0 */
 var motionbackground = (function () {
     return {
         initsnow: initsnow,
@@ -359,17 +360,15 @@ var motionbackground = (function () {
 
         createParticles();
         animateParticles();
-        var initonce = false;
         window.addEventListener("resize", () => {
             clearTimeout(window.resizedFinished);
             window.resizedFinished = setTimeout(function () {
-                canvas.remove();
-                if (!initonce) {
-                    setTimeout(() => {
-                        initdotliner(color1, color2);
-                    }, 200);
-                    initonce = true;
-                }
+                setTimeout(() => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    particles = [];
+                    createParticles();
+                }, 200);
             }, 200);
         });
     }
