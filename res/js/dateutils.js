@@ -4,11 +4,11 @@ const dateutils = (function () {
         ToDateTime: timestampToDateTime,
         ToHash: encrypt
     };
-    function timestampToTime(timestamp) {
+    function timestampToTime(timestamp = Date.now()) {
         const date = new Date(timestamp);
         return date;
     }
-    function timestampToDateTime(timestamp) {
+    function timestampToDateTime(timestamp = Date.now()) {
         const date = new Date(timestamp);
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -19,7 +19,7 @@ const dateutils = (function () {
 
         return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
     }
-    function encrypt(timestamp) {
+    function encrypt(timestamp = Date.now()) {
         const now = new Date(timestamp);
         const uniqueCode = `${now.getFullYear()}${now.getMonth()}${now.getDate()}${now.getHours()}${now.getMinutes()}${now.getSeconds()}${now.getMilliseconds()}${Math.random() * 10000}`;
         const hashedCode = btoa(uniqueCode).replace(/=/g, '');
