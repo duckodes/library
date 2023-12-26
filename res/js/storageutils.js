@@ -8,7 +8,7 @@ var storageutils = (function () {
         if (localStorage.getItem(k) === null) {
             localStorage.setItem(k, v + `_${0}`);
         } else {
-            localStorage.setItem(k, `${getBefore(localStorage.getItem(k), '_')}_${(parseInt(getAfter(localStorage.getItem(k), '_')) + 1)}`);
+            localStorage.setItem(k, `${v}_${(parseInt(getAfter(localStorage.getItem(k), '_')) + 1)}`);
         }
     }
     function get(k, v = null) {
