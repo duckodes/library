@@ -38,6 +38,56 @@
     <p>QUAck, so page not QUACk</p>
     <p>If page not QUACK, qUAck is qUACk.</p>
     <p>Then turn back to <a href="https://duckode.com"><strong>QUACK</strong></a>.</p>
+    <h1>BingX
+        <select class="selector"></select>
+    </h1>
+
+    <h2 class="c-num"></h2>
+    <h2 class="c-time"></h2>
+    <h2 class="c-bid"></h2>
+    <h2 class="c-ask"></h2>
 </body>
+<script>
+    const url = 'http://localhost:3000/api/ticker';
+
+    const cnum = document.querySelector('.c-num');
+    const ctime = document.querySelector('.c-time');
+    const cbid = document.querySelector('.c-bid');
+    const cask = document.querySelector('.c-ask');
+    const selector = document.querySelector('.selector');
+
+    async function main() {
+        try {
+            const response = await axios.get(url);
+            console.log(response.data);
+            console.log(response.data.data[0].lastPrice);
+            console.log(response.data.data[0].askPrice);
+            cnum.textContent = `${response.data.data[0].symbol} 最新價 ${response.data.data[0].lastPrice} ${response.data.data[0].priceChangePercent}`;
+            ctime.textContent = new Date(response.data.timestamp).toLocaleString();
+            cbid.textContent = `買一價格${response.data.data[0].bidPrice}買一數量${response.data.data[0].bidQty}`;
+            cask.textContent = `賣一價格${response.data.data[0].askPrice}賣一數量${response.data.data[0].askQty}`;
+            setTimeout(main, 120);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+    main();
+
+    async function symbol() {
+        try {
+            const response = await axios.get("http://localhost:3000/api/symbols");
+            console.log(response.data.data);
+            console.log(response.data.data.symbols[0].symbol);
+            response.data.data.symbols.forEach(symbol => {
+                const option = document.createElement('option');
+                option.textContent = symbol.symbol;
+                selector.appendChild(option);
+            });
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+    symbol();
+</script>
 
 </html>
