@@ -1,6 +1,17 @@
-# SOURCE
+# <span style="font-size: 100px;color: #0070ee;">F</span>ONT SOURCE
 
-## clickutils
+### setup
+```
+<!--set to header-->
+<link rel="stylesheet" href="https://lib.duckode.com/css/font-face.css">
+```
+> ## Available font
+> * 'Ysabeau_SC'
+> * 'Poiret_One'
+
+# <span style="font-size: 100px;color: #0070ee;">J</span>S SOURCE
+
+## <span style="color: #00b0ee;">clickutils.js</span>
 ### last version 1.0.1
 ### description
 > * To prevent MITB from executing scripted click events, a clickutils.js has been developed. 
@@ -42,8 +53,7 @@
 > * func : function —— action to add to
 
 
-
-## contextmenuutils
+## <span style="color: #00b0ee;">contextmenuutils.js</span>
 ### last version 1.0.1
 ### description
 > * Easy to add menu or list with javascript
@@ -60,8 +70,8 @@
         contextmenuutils.init(document.body, (b, c) => {
             c.style.paddingTop = '3px';
             c.style.paddingBottom = '3px';
-            c.style.left = (e.clientX) + "px";
-            c.style.top = (e.clientY) + "px";
+            // ToMouse(c) or ToParent(c)
+            ToMouse(c);
         });
         contextmenuutils.addItem('Item 1', (c) => {
             setup(c, () => {
@@ -105,12 +115,11 @@
 ```
 
 ### function
-> * contextmenuutils.init(e, p, fc)
+> * contextmenuutils.init(p, fc)
 > * contextmenuutils.addItem(t, fc)
 > * contextmenuutils.remove()
 
 ### parameter
-> * e : event —— event
 > * p : element —— parent of contextmenu
 > * t : string —— item name
 > * fc : function —— action to add to
