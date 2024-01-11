@@ -84,6 +84,16 @@
                 c.style.background = "";
             });
         }
+        
+        // setup contextmenu display : mouse position
+        function ToMouse(c) {
+            c.style.left = (e.clientX) + "px";
+            c.style.top = (e.clientY) + "px";
+        }
+        // setup contextmenu display : in parent
+        function ToParent(c) {
+            c.className = "relative";
+        }
     });
 </script>
 ```
