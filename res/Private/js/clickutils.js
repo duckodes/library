@@ -17,11 +17,13 @@ const clickutils = (function () {
             }
             window.addEventListener('mouseup', mouseUp);
         });
-        element.addEventListener("mouseup", (e) => {
+        function mouseUp(e) {
             if (start) {
                 func(e);
             }
-        });
+            element.removeEventListener('mouseup', mouseUp);
+        }
+        element.addEventListener("mouseup", mouseUp);
         element.addEventListener("touchstart", (e) => {
             start = true;
             function touchEnd() {
@@ -30,11 +32,13 @@ const clickutils = (function () {
             }
             window.addEventListener('touchmove', touchEnd);
         });
-        element.addEventListener("touchend", (e) => {
+        function touchEnd(e) {
             if (start) {
                 func(e);
             }
-        });
+            element.removeEventListener('touchend', touchEnd);
+        }
+        element.addEventListener("touchend", touchEnd);
     }
     function nClick(element, button) {
         return new Promise((resolve) => {
@@ -51,11 +55,13 @@ const clickutils = (function () {
                 }
                 window.addEventListener('mouseup', mouseUp);
             });
-            element.addEventListener("mouseup", (e) => {
+            function mouseUp(e) {
                 if (start) {
                     resolve(e);
                 }
-            });
+                element.removeEventListener('mouseup', mouseUp);
+            }
+            element.addEventListener("mouseup", mouseUp);
             element.addEventListener("touchstart", () => {
                 start = true;
                 function touchEnd() {
@@ -64,11 +70,13 @@ const clickutils = (function () {
                 }
                 window.addEventListener('touchmove', touchEnd);
             });
-            element.addEventListener("touchend", (e) => {
+            function touchEnd(e) {
                 if (start) {
                     resolve(e);
                 }
-            });
+                element.removeEventListener('touchend', touchEnd);
+            }
+            element.addEventListener("touchend", touchEnd);
         });
     }
 }());
