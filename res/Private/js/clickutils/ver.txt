@@ -1,0 +1,7 @@
+*1.0.0
+will not delete EventListener (mousedown, touchstart), when putting clickutils public function in
+the same function, will keep adding that EventListener Array, this will makes not very easy to control code, ex. when you only want to checking one times click, but EventListener adding same function more then one, it will makes mutiple times, so I decided to fix this and do clear in version *1.0.1.
+
+*1.0.1
+fix 1.0.0 bugs
+changing all Event do one times when click or touching, if you wanna to add default clickutils public function... you should check, when to add clickutils public function again, because when you add on default it will do only one times.
