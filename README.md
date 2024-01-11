@@ -1,28 +1,27 @@
-$\color{green}{test}$
-# <span style="font-size: 100px;color: #0070ee;">F</span>ONT SOURCE
+# ⚡ FONT SOURCE
 
-### setup
-```
+### 💧 setup
+```html
 <!--set to header-->
 <link rel="stylesheet" href="https://lib.duckode.com/css/font-face.css">
 ```
 > ## Available font
-> * 'Ysabeau_SC'
-> * 'Poiret_One'
+> 🔹 'Ysabeau_SC'
+> 🔹 'Poiret_One'
 
-# <span style="font-size: 100px;color: #0070ee;">J</span>S SOURCE
+# ⚡ JS SOURCE
 
-## <span style="color: #00b0ee;">clickutils.js</span>
-### last version 1.0.1
-### description
+## 🔥 clickutils.js
+### 💧 last version 1.0.1
+### 💧 description
 > * To prevent MITB from executing scripted click events, a clickutils.js has been developed. 
 > * This script utilizes event listeners such as mousedown, mouseup, touchstart, and touchend.
 
 > ### Note (repeated multiple times):
 > All functions returned by clickutils are intended for a single use. Therefore, functions returned by clickutils should be re-added internally at the appropriate moment to avoid being executed only once.
 
-### Quick setup
-```
+### 💧 Quick setup
+```html
 <!--set to body-->
 <script src="https://lib.duckode.com/js/clickutils.min.js"></script>
 <script>
@@ -36,12 +35,12 @@ $\color{green}{test}$
 </script>
 ```
 
-### setup
-```
+### 💧 setup
+```html
 <script src="https://lib.duckode.com/js/clickutils.min.js"></script>
 ```
 
-### function
+### 💧 function
 > ### nClick & nTouch return by Promise
 > * clickutils.click(element, button, func)
 > * clickutils.nClick(element, button)
@@ -54,13 +53,13 @@ $\color{green}{test}$
 > * func : function —— action to add to
 
 
-## <span style="color: #00b0ee;">contextmenuutils.js</span>
-### last version 1.0.1
-### description
+## 🔥 contextmenuutils.js
+### 💧 last version 1.0.1
+### 💧 description
 > * Easy to add menu or list with javascript
 
-### Quick setup
-```
+### 💧 Quick setup
+```html
 <!--set to header-->
 <link rel="stylesheet" href="https://lib.duckode.com/css/contextmenuutils.css">
 
@@ -109,18 +108,18 @@ $\color{green}{test}$
 </script>
 ```
 
-### setup
-```
+### 💧 setup
+```html
 <link rel="stylesheet" href="https://lib.duckode.com/css/contextmenuutils.css">
 <script src="https://lib.duckode.com/js/contextmenuutils.min.js"></script>
 ```
 
-### function
+### 💧 function
 > * contextmenuutils.init(p, fc)
 > * contextmenuutils.addItem(t, fc)
 > * contextmenuutils.remove()
 
-### parameter
+### 💧 parameter
 > * p : element —— parent of contextmenu
 > * t : string —— item name
 > * fc : function —— action to add to
