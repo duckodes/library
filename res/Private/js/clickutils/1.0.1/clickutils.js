@@ -16,7 +16,6 @@ const clickutils = (function () {
             function mouseUp() {
                 start = false;
                 window.removeEventListener('mouseup', mouseUp);
-                element.removeEventListener('mousedown', mouseDown);
             }
             window.addEventListener('mouseup', mouseUp);
         }
@@ -63,7 +62,6 @@ const clickutils = (function () {
             function touchEnd() {
                 start = false;
                 window.removeEventListener('touchmove', touchEnd);
-                element.removeEventListener("touchstart", touchStart);
             }
             window.addEventListener('touchmove', touchEnd);
         }
@@ -85,7 +83,6 @@ const clickutils = (function () {
                 function touchEnd() {
                     start = false;
                     window.removeEventListener('touchmove', touchEnd);
-                    element.removeEventListener('touchstart', touchStart);
                 }
                 window.addEventListener('touchmove', touchEnd);
             }
