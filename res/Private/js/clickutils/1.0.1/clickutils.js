@@ -42,7 +42,6 @@ const clickutils = (function () {
                 function mouseUp() {
                     start = false;
                     window.removeEventListener('mouseup', mouseUp);
-                    element.removeEventListener('mousedown', mouseDown);
                 }
                 window.addEventListener('mouseup', mouseUp);
             }
