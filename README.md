@@ -12,7 +12,7 @@
 # ⚡ JS SOURCE
 
 ## 🔥 clickutils.js
-### 💧 last version 1.0.1
+### 💧 last version 1.0.2
 ### 💧 description
 > * To prevent MITB from executing scripted click events, a clickutils.js has been developed. 
 > * This script utilizes event listeners such as mousedown, mouseup, touchstart, and touchend.

@@ -5,3 +5,7 @@ the same function, will keep adding that EventListener Array, this will makes no
 *1.0.1
 fix 1.0.0 bugs
 changing all Event do one times when click or touching, if you wanna to add default clickutils public function... you should check, when to add clickutils public function again, because when you add on default it will do only one times.
+
+*1.0.2
+fix 1.0.1 bugs
+when cancel click will remove element by mouseDown
