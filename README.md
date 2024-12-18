@@ -27,11 +27,13 @@
 <script>
     const element = document.querySelector('.your-target-class');
     var canLoop = true; // Default: true
+    const click = clickutils.click(element, 0, elementClick, canLoop);
     function elementClick(e) {
         // TODO: click action
         // parameter 'e': mouseup event
+        console.log("element is click");
+        click.removeLoop(); // to remove the loop can call this function
     }
-    clickutils.click(element, 0, elementClick, canLoop);
 </script>
 ```
 
