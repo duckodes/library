@@ -12,7 +12,7 @@
 # ⚡ JS SOURCE
 
 ## 🔥 clickutils.js
-### 💧 last version 1.0.2
+### 💧 last version 1.0.3
 ### 💧 description
 > * To prevent MITB from executing scripted click events, a clickutils.js has been developed. 
 > * This script utilizes event listeners such as mousedown, mouseup, touchstart, and touchend.
@@ -26,12 +26,12 @@
 <script src="https://lib.duckode.com/js/clickutils.min.js"></script>
 <script>
     const element = document.querySelector('.your-target-class');
+    var canLoop = true; // Default: true
     function elementClick(e) {
         // TODO: click action
-        // parameter 'e': mouse event
-        // loop: use clickutils.click(element, 0, elementClick) in this function
+        // parameter 'e': mouseup event
     }
-    clickutils.click(element, 0, elementClick);
+    clickutils.click(element, 0, elementClick, canLoop);
 </script>
 ```
 
