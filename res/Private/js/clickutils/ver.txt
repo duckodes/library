@@ -9,3 +9,7 @@ changing all Event do one times when click or touching, if you wanna to add defa
 *1.0.2
 fix 1.0.1 bugs
 when cancel click will remove element by mouseDown
+
+*1.0.3
+remove Promise function
+update loop function for easily loop

@@ -1,9 +1,6 @@
 const clickutils = (function () {
     return {
-        click: click,
-        nClick: nClick,
-        touch: touch,
-        nTouch: nTouch
+        click: click
     };
     function click(element, button, callback, isLoop = true) {
         let start = false;
