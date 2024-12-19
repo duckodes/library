@@ -57,14 +57,14 @@
 <!--set to body-->
 <script src="https://lib.duckode.com/js/contextmenuutils.min.js"></script>
 <script>
-    var toClickPoint = true; // Default: false
+    const toClickPoint = true; // Default: false
     document.addEventListener("click", (e) => {
         contextmenuutils.init(document.body, (base, contextmenu) => {
             // base: background board of contextmenu
             // contextmenu: main board of contextmenu
             contextmenu.style.paddingTop = '3px';
             contextmenu.style.paddingBottom = '3px';
-        }, true);
+        }, toClickPoint);
         const changeColor = (item, callback) => {
             item.addEventListener("click", callback);
             item.addEventListener("mouseenter", () => {
