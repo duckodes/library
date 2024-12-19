@@ -17,14 +17,14 @@ const contextmenuutils = (function () {
             parent.appendChild(contextmenu);
 
             callback(base, contextmenu);
-            if (toClickPoint) {
-                contextmenu.style.left = (e.clientX) + "px";
-                contextmenu.style.top = (e.clientY) + "px";
-            }
 
             window.onclick = function (e) {
                 if (e.target === base) {
                     remove();
+                }
+                if (toClickPoint) {
+                    contextmenu.style.left = (e.clientX) + "px";
+                    contextmenu.style.top = (e.clientY) + "px";
                 }
             }
 
