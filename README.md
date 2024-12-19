@@ -32,7 +32,6 @@
 ```
 
 ### 💧 function
-> ### nClick & nTouch return by Promise
 > * clickutils.click(element, button, func)
 
 ### parameter
