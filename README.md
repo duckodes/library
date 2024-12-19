@@ -59,9 +59,11 @@
 <script>
     var toClickPoint = true; // Default: false
     document.addEventListener("click", (e) => {
-        contextmenuutils.init(document.body, (b, c) => {
-            c.style.paddingTop = '3px';
-            c.style.paddingBottom = '3px';
+        contextmenuutils.init(document.body, (base, contextmenu) => {
+            // base: background board of contextmenu
+            // contextmenu: main board of contextmenu
+            contextmenu.style.paddingTop = '3px';
+            contextmenu.style.paddingBottom = '3px';
         }, true);
         const changeColor = (item, callback) => {
             item.addEventListener("click", callback);
@@ -73,6 +75,7 @@
             });
         }
         contextmenuutils.addItem('Item 1', (item) => {
+            // item: contextmenu item (contextmenu child)
             changeColor(item, () => {
                 // TODO: click item action
                 console.log('item action 1');
@@ -80,7 +83,6 @@
         });
         contextmenuutils.addItem('Item 2', (item) => {
             changeColor(item, () => {
-                // TODO: click item action
                 console.log('item action 2');
             });
         });
