@@ -1,14 +1,3 @@
-# ⚡ FONT SOURCE
-
-### 💧 setup
-```html
-<!--set to header-->
-<link rel="stylesheet" href="https://lib.duckode.com/css/font-face.css">
-```
-> ## Available font
-> 🔹 'Ysabeau_SC'
-> 🔹 'Poiret_One'
-
 # ⚡ JS SOURCE
 
 ## 🔥 clickutils.js
@@ -68,44 +57,33 @@
 <!--set to body-->
 <script src="https://lib.duckode.com/js/contextmenuutils.min.js"></script>
 <script>
+    var toClickPoint = true; // Default: false
     document.addEventListener("click", (e) => {
         contextmenuutils.init(document.body, (b, c) => {
             c.style.paddingTop = '3px';
             c.style.paddingBottom = '3px';
-            // ToMouse(c) or ToParent(c)
-            ToMouse(c);
-        });
-        contextmenuutils.addItem('Item 1', (c) => {
-            setup(c, () => {
+        }, true);
+        const changeColor = (item, callback) => {
+            item.addEventListener("click", callback);
+            item.addEventListener("mouseenter", () => {
+                item.style.background = "#505050";
+            });
+            item.addEventListener("mouseleave", () => {
+                item.style.background = "";
+            });
+        }
+        contextmenuutils.addItem('Item 1', (item) => {
+            changeColor(item, () => {
                 // TODO: click item action
                 console.log('item action 1');
             });
         });
-        contextmenuutils.addItem('Item 2', (c) => {
-            setup(c, () => {
+        contextmenuutils.addItem('Item 2', (item) => {
+            changeColor(item, () => {
                 // TODO: click item action
                 console.log('item action 2');
             });
         });
-        function setup(c, func) {
-            c.addEventListener("click", func);
-            c.addEventListener("mouseenter", () => {
-                c.style.background = "#505050";
-            });
-            c.addEventListener("mouseleave", () => {
-                c.style.background = "";
-            });
-        }
-        
-        // setup contextmenu display : mouse position
-        function ToMouse(c) {
-            c.style.left = (e.clientX) + "px";
-            c.style.top = (e.clientY) + "px";
-        }
-        // setup contextmenu display : in parent
-        function ToParent(c) {
-            c.className = "relative";
-        }
     });
 </script>
 ```
