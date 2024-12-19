@@ -34,15 +34,12 @@
 ### 💧 function
 > ### nClick & nTouch return by Promise
 > * clickutils.click(element, button, func)
-> * clickutils.nClick(element, button)
-> * clickutils.touch(element, func)
-> * clickutils.nTouch(element)
 
 ### parameter
 > * element : any —— target element
 > * button : number —— 0: left mouse button, 1: right mouse button
-> * func : function —— action to add to
-
+> * callback : function —— action to add to
+> * canLoop : boolean —— do click function again
 
 ## 🔥 contextmenuutils.js
 ### 💧 last version 1.0.1
@@ -101,9 +98,9 @@
 > * contextmenuutils.addItem(t, fc)
 > * contextmenuutils.remove()
 
-### 💧 parameter
-> * p : element —— parent of contextmenu
-> * t : string —— item name
-> * fc : function —— action to add to
-> * b : element —— cover item element
-> * c : element —— item element
+### parameter
+> * parent : element —— parent of contextmenu
+> * content : string —— item name
+> * callback : function —— action to add to
+> * base : element —— background board of contextmenu
+> * contextmenu : element —— item element
