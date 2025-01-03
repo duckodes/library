@@ -4,10 +4,10 @@
 ### 💧 last version 1.0.3
 ### 💧 description
 > * To prevent MITB from executing scripted click events, a clickutils.js has been developed. 
-> * This script utilizes event listeners such as mousedown, mouseup, touchstart, and touchend.
+> * This script utilizes event listeners such as mousedown, mouseup
 
 > ### Note (repeated multiple times):
-> All functions returned by clickutils are intended for a single use. Therefore, functions returned by clickutils should be re-added internally at the appropriate moment to avoid being executed only once.
+> All functions returned by clickutils are intended for a single use. To allow clickutils to operate more than once, you need to set canLoop to true. The advantage is that you can add the removeLoop() method at the appropriate time to remove the loop. This method will immediately remove the events that were added.
 
 ### 💧 Quick setup
 ```html
