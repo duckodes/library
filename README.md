@@ -75,11 +75,13 @@
             changeColor(item, () => {
                 // TODO: click item action
                 console.log('item action 1');
+                contextmenuutils.remove(); // remove the contextmenu
             });
         });
         contextmenuutils.addItem('Item 2', (item) => {
             changeColor(item, () => {
                 console.log('item action 2');
+                contextmenuutils.remove(); // remove the contextmenu
             });
         });
     });
