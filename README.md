@@ -41,7 +41,7 @@
 > * canLoop : boolean —— do click function again
 
 ## 🔥 contextmenuutils.js
-### 💧 last version 1.0.1
+### 💧 last version 1.0.3
 ### 💧 description
 > * Easy to add menu or list with javascript
 
@@ -53,14 +53,15 @@
 <!--set to body-->
 <script src="https://lib.duckode.com/js/contextmenuutils.min.js"></script>
 <script>
-    const toClickPoint = true; // Default: false
+    const toClickPoint = true; // Default: false (true: generate at mouse point)
+    const target = null; // target click element (if toClickPoint = false && target != null, generate below target)
     document.addEventListener("click", (e) => {
         contextmenuutils.init(document.body, (base, contextmenu) => {
             // base: background board of contextmenu
             // contextmenu: main board of contextmenu
             contextmenu.style.paddingTop = '3px';
             contextmenu.style.paddingBottom = '3px';
-        }, toClickPoint);
+        }, toClickPoint, target);
         const changeColor = (item, callback) => {
             item.addEventListener("click", callback);
             item.addEventListener("mouseenter", () => {

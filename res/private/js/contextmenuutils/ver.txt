@@ -1,1 +1,2 @@
-1.0.2 add toClickPoint
+1.0.2 [+]生成在滑鼠座標toClickPoint
+1.0.3 [!]可以生成在點擊的座標下
