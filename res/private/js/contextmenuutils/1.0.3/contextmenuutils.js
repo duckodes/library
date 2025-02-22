@@ -28,8 +28,8 @@ const contextmenuutils = (function () {
                 }
             }
             if (target && !toClickPoint) {
-                contextmenu.style.left = (target.clientWidth) + "px";
-                contextmenu.style.top = (target.clientHeight) + "px";
+                contextmenu.style.left = target.getBoundingClientRect().x + "px";
+                contextmenu.style.top = (target.clientHeight) + target.getBoundingClientRect().y + "px";
             }
 
             active = true;
