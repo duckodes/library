@@ -5,15 +5,6 @@ const contextmenuutils = (function () {
     function init(parent, target = null) {
         const base = document.createElement("div");
         base.id = "ins-contextmenu-base";
-        base.onclick = (e) => {
-            if (e.target === base) {
-                remove();
-            }
-            if (!target) {
-                contextmenu.style.left = (e.clientX) + "px";
-                contextmenu.style.top = (e.clientY) + "px";
-            }
-        }
 
         const contextmenu = document.createElement("div");
         contextmenu.id = "ins-contextmenu";
@@ -32,6 +23,16 @@ const contextmenuutils = (function () {
         const remove = () => {
             base.remove();
             contextmenu.remove();
+        }
+
+        base.onclick = (e) => {
+            if (e.target === base) {
+                remove();
+            }
+            if (!target) {
+                contextmenu.style.left = (e.clientX) + "px";
+                contextmenu.style.top = (e.clientY) + "px";
+            }
         }
         if (target) {
             contextmenu.style.left = target.getBoundingClientRect().x + "px";
