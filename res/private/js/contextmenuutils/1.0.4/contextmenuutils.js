@@ -13,8 +13,17 @@ const contextmenuutils = (function () {
 
         parent.appendChild(base);
         parent.appendChild(contextmenu);
+        const addItem = () => {
+            const item = document.createElement("div");
+            item.textContent = content;
+            contextmenu.appendChild(item);
 
-        callback(base, contextmenu);
+            callback(item);
+        }
+        const remove = () => {
+            base.remove();
+            contextmenu.remove();
+        }
 
         window.onclick = (e) => {
             if (e.target === base) {
@@ -29,20 +38,11 @@ const contextmenuutils = (function () {
             contextmenu.style.left = target.getBoundingClientRect().x + "px";
             contextmenu.style.top = (target.clientHeight) + target.getBoundingClientRect().y + "px";
         }
-    }
-    function addItem(contextmenu, content, callback) {
-        const item = document.createElement("div");
-        item.textContent = content;
-        contextmenu.appendChild(item);
-
-        callback(item);
-    }
-    function remove(base, menu) {
-        if (base) {
-            base.remove();
-        }
-        if (menu) {
-            menu.remove();
+        return {
+            base,
+            contextmenu,
+            addItem,
+            remove
         }
     }
 }());
