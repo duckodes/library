@@ -4,7 +4,7 @@ const contextmenuutils = (function () {
         addItem: addItem,
         remove: remove
     }
-    function init(parent, callback, target = null) {
+    function init(parent, target = null) {
         const base = document.createElement("div");
         base.id = "ins-contextmenu-base";
 
