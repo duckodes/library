@@ -1,8 +1,6 @@
 const contextmenuutils = (function () {
     return {
-        init: init,
-        addItem: addItem,
-        remove: remove
+        init: init
     }
     function init(parent, target = null) {
         const base = document.createElement("div");
