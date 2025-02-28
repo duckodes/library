@@ -25,7 +25,7 @@ const contextmenuutils = (function () {
             contextmenu.remove();
         }
 
-        window.onclick = (e) => {
+        base.onclick = (e) => {
             if (e.target === base) {
                 remove();
             }
