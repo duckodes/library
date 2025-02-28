@@ -16,9 +16,7 @@ const contextmenuutils = (function () {
             item.textContent = content;
             contextmenu.appendChild(item);
 
-            return {
-                item
-            }
+            return item;
         }
         const remove = () => {
             base.remove();
