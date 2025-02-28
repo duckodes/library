@@ -13,12 +13,12 @@ const contextmenuutils = (function () {
 
         parent.appendChild(base);
         parent.appendChild(contextmenu);
-        const addItem = () => {
+        const addItem = (content) => {
             const item = document.createElement("div");
             item.textContent = content;
             contextmenu.appendChild(item);
 
-            callback(item);
+            return item;
         }
         const remove = () => {
             base.remove();
