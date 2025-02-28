@@ -32,7 +32,7 @@ const contextmenuutils = (function () {
                 contextmenu.style.top = (e.clientY) + "px";
             }
         }
-        if (target && !toClickPoint) {
+        if (target) {
             contextmenu.style.left = target.getBoundingClientRect().x + "px";
             contextmenu.style.top = (target.clientHeight) + target.getBoundingClientRect().y + "px";
         }
