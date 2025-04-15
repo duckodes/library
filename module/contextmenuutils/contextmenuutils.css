@@ -1,4 +1,4 @@
-#ins-contextmenu-base {
+.contextmenu-base {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,28 +7,26 @@
     z-index: 2147483646;
 }
 
-#ins-contextmenu {
-    background: #353535;
-    border-radius: 5px;
+.contextmenu-menu {
+    background: #eee;
+    border-radius: 2px;
     position: fixed;
     z-index: 2147483647;
 }
 
-#ins-contextmenu div {
-    color: #fff;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
+.contextmenu-menu div {
+    color: #333;
+    margin: 5px 0;
+    padding: 5px 10px;
+    padding-right: 50px;
+    text-align: left;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    font-size: 14px;
     cursor: pointer;
 }
 
-#ins-contextmenu.relative {
-    position: relative;
+.contextmenu-menu div:hover {
+    background: #aaa;
 }
