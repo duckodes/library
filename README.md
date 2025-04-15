@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="https://lib.duckode.com/css/contextmenuutils.css">
 
 <!--set to body-->
-<script src="https://lib.duckode.com/module/contextmenuutils/contextmenuutils.js"></script>
 <script>
     import { contextmenuutils } from "https://lib.duckode.com/module/contextmenuutils/contextmenuutils.js";
     document.addEventListener("click", (e) => {
