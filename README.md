@@ -1,3 +1,38 @@
+# ⚡ ESM
+
+## 🔥 contextmenuutils.js
+### 💧 last version 1.0.4
+### 💧 description
+> * Easy to add menu or list with ES Module
+
+### 💧 Quick setup
+```html
+<!--set to header-->
+<link rel="stylesheet" href="https://lib.duckode.com/css/contextmenuutils.css">
+
+<!--set to body-->
+<script src="https://lib.duckode.com/module/contextmenuutils/contextmenuutils.js"></script>
+<script>
+    import { contextmenuutils } from "https://lib.duckode.com/module/contextmenuutils/contextmenuutils.js";
+    document.addEventListener("click", (e) => {
+        // initialize menu base
+        const menu = contextmenuutils.init(document.body, file);
+
+        // add sub menu
+        const submenu = menu.addItem('click submenu');
+        submenu.addEventListener("click", () => {
+            console.log('click submenu');
+        });
+    });
+</script>
+```
+
+### 💧 setup
+```html
+<link rel="stylesheet" href="https://lib.duckode.com/css/contextmenuutils.css">
+<script src="https://lib.duckode.com/module/contextmenuutils/contextmenuutils.js"></script>
+```
+
 # ⚡ JS SOURCE
 
 ## 🔥 clickutils.js
