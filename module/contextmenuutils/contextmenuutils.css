@@ -1,0 +1,34 @@
+#ins-contextmenu-base {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2147483646;
+}
+
+#ins-contextmenu {
+    background: #353535;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 2147483647;
+}
+
+#ins-contextmenu div {
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#ins-contextmenu.relative {
+    position: relative;
+}
