@@ -33,10 +33,8 @@ const contextmenuutils = (function () {
             menu.remove();
         }
 
-        window.onclick = (e) => {
-            if (e.target === base) {
-                remove();
-            }
+        base.onclick = (e) => {
+            remove();
             if (!target) {
                 menu.style.left = (e.clientX) + "px";
                 menu.style.top = (e.clientY) + "px";

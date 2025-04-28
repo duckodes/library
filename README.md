@@ -11,11 +11,11 @@
 <link rel="stylesheet" href="https://lib.duckode.com/css/contextmenuutils.css">
 
 <!--set to body-->
-<script>
-    import { contextmenuutils } from "https://lib.duckode.com/module/contextmenuutils/contextmenuutils.js";
+<script type="module">
+    import contextmenuutils from "https://lib.duckode.com/module/contextmenuutils/contextmenuutils.js";
     document.addEventListener("click", (e) => {
         // initialize menu base
-        const menu = contextmenuutils.init(document.body, file);
+        const menu = contextmenuutils.init(document.body, document.body);
 
         // add sub menu
         const submenu = menu.addItem('click submenu');
