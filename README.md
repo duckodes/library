@@ -8,7 +8,7 @@
 ### 💧 Quick setup
 ```html
 <!--set to header-->
-<link rel="stylesheet" href="https://lib.duckode.com/css/contextmenuutils.css">
+<link rel="stylesheet" href="https://lib.duckode.com/module/contextmenuutils/contextmenuutils.css">
 
 <!--set to body-->
 <script type="module">
@@ -21,6 +21,7 @@
         const submenu = menu.addItem('click submenu');
         submenu.addEventListener("click", () => {
             console.log('click submenu');
+            menu.remove();
         });
     });
 </script>

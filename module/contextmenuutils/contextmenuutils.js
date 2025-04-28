@@ -8,6 +8,8 @@ const contextmenuutils = (function () {
         return check;
     }
     function init(parent, target = null) {
+        if (document.querySelector('.contextmenu-base')) return;
+
         const base = document.createElement("div");
         base.className = "contextmenu-base";
 
@@ -33,8 +35,10 @@ const contextmenuutils = (function () {
             menu.remove();
         }
 
-        base.onclick = (e) => {
-            remove();
+        window.onclick = (e) => {
+            if (e.target === base) {
+                remove();
+            }
             if (!target) {
                 menu.style.left = (e.clientX) + "px";
                 menu.style.top = (e.clientY) + "px";
